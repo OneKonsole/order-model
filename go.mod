@@ -1,3 +1,3 @@
-module one-konsole/order-service/onekorder
+module "OneKonsole/order-model"
 
 go 1.21.4
