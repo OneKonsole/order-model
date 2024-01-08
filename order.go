@@ -7,7 +7,7 @@ import (
 type Order struct {
 	ID                int    `json:"id"`
 	UserID            string `json:"user_id" validate:"required,uuid"`
-	ClusterName       string `json:"cluster_name" validate:"required,min=1,max=63,match=^[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]$"`
+	ClusterName       string `json:"cluster_name" validate:"required,min=1,max=63,regexp=^[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]$"`
 	HasControlPlane   bool   `json:"has_control_plane"`
 	HasMonitoring     bool   `json:"has_monitoring"`
 	HasAlerting       bool   `json:"has_alerting"`
