@@ -32,7 +32,7 @@ func (o *Order) UpdateOrder(db *sql.DB) error {
 	columns := "user_id=$1, cluster_name=$2, has_control_plane=$3,has_monitoring=$4,has_alerting=$5,images_storage=$6, monitoring_storage=$7"
 
 	_, err :=
-		db.Exec("UPDATE orders SET "+columns+" WHERE id=$7",
+		db.Exec("UPDATE orders SET "+columns+" WHERE id=$8",
 			o.UserID, o.ClusterName, o.HasControlPlane, o.HasMonitoring, o.HasAlerting, o.ImageStorage, o.MonitoringStorage, o.ID)
 
 	return err
