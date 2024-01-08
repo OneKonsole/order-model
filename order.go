@@ -8,9 +8,9 @@ type Order struct {
 	ID                int    `json:"id"`
 	UserID            string `json:"user_id" validate:"required,uuid"`
 	ClusterName       string `json:"cluster_name" validate:"required,min=2,max=63,alphanum,startswithalphanum,endswithalphanum"`
-	HasControlPlane   bool   `json:"has_control_plane" validate:"required"`
-	HasMonitoring     bool   `json:"has_monitoring" validate:"required"`
-	HasAlerting       bool   `json:"has_alerting" validate:"required"`
+	HasControlPlane   bool   `json:"has_control_plane"`
+	HasMonitoring     bool   `json:"has_monitoring"`
+	HasAlerting       bool   `json:"has_alerting"`
 	ImageStorage      int    `json:"images_storage" validate:"required"`
 	MonitoringStorage int    `json:"monitoring_storage" validate:"required"`
 }
