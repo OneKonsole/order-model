@@ -12,7 +12,7 @@ type Order struct {
 	HasMonitoring     bool   `json:"has_monitoring"`
 	HasAlerting       bool   `json:"has_alerting"`
 	ImageStorage      int    `json:"images_storage" validate:"required"`
-	MonitoringStorage int    `json:"monitoring_storage" validate:"required"`
+	MonitoringStorage int    `json:"monitoring_storage" validate:"required_with=has_monitoring"`
 }
 
 func (o *Order) GetOrder(db *sql.DB) error {
