@@ -6,6 +6,7 @@ import (
 
 type Order struct {
 	ID                int    `json:"id"`
+	PaypalID          string `json:"paypal_id" validate:"required"`
 	UserID            string `json:"user_id" validate:"required,uuid"`
 	ClusterName       string `json:"cluster_name" validate:"required,min=1,max=63,isvalidclustername"`
 	HasControlPlane   bool   `json:"has_control_plane"`
